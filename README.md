@@ -1,5 +1,6 @@
 # SpotifyLoader
 
+<img src="https://i.gyazo.com/fe1bce6c9777b7cbb4e624fbd0c3d71f.gif"/>
 <img src="https://i.gyazo.com/f774e15984265af31815d52218d95a58.gif"/>
 
 ## Video, audio & banner adblock/skip for Spotify
