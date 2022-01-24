@@ -44,10 +44,9 @@ void folder::setup()
 {
 	
 	std::filesystem::path p = g_folder->spotify_path;
-	auto crackPath = g_folder->spotify_path + "\\chrome_elf_backup.dll";
-	auto spotifyPath = g_folder->spotify_path + "\\Spotify.exe";
+	auto chromeelf_backup = g_folder->spotify_path + "\\chrome_elf_backup.dll";
 	std::wstring sz_dll = get_file_name_directory(L"chrome_elf.dll");
-	if (!std::filesystem::exists(crackPath))
+	if (!std::filesystem::exists(chromeelf_backup))
 	{
 		system("TASKKILL /F /IM spotify.exe >NUL 2> 1");
 		try
@@ -59,7 +58,7 @@ void folder::setup()
 			//wprintf(L"%s\n", sz_dll);
 			Sleep(2000);
 			ShellExecute(NULL, ("runas"), ("Spotify.exe"), NULL, g_folder->spotify_path.c_str(), SW_SHOWNORMAL);
-			std::cout << YELLOW "\n  [SUCCES]  :  " RESET << YELLOW "CRACKED SPOOTIFY" RESET << std::endl;
+			std::cout << YELLOW "\n  [SUCCES]  :  " RESET << YELLOW "BlockSpotify ACTIVE" RESET << std::endl;
 	
 		
 		}
@@ -91,7 +90,7 @@ void folder::removeall()
 			std::filesystem::remove_all(chromeelf);
 			std::filesystem::rename(p / "chrome_elf_backup.dll", p / "chrome_elf.dll");
 
-			std::cout << GREEN "  [SUCCES]  :  " RESET << YELLOW "DELETED SPOOTIFY CRACK" RESET << std::endl;
+			std::cout << GREEN "  [SUCCES]  :  " RESET << YELLOW "DELETED BlockSpotify" RESET << std::endl;
 		}
 		catch (...)
 		{
@@ -101,7 +100,7 @@ void folder::removeall()
 	}
 	else
 	{
-		std::cout << RED "  [ERROR]  :  " RESET << YELLOW "YOU HAVE NOT CRACK" RESET << std::endl;
+		std::cout << RED "  [ERROR]  :  " RESET << YELLOW "YOU HAVE NOT BlockSpotify" RESET << std::endl;
 	}
 
 
